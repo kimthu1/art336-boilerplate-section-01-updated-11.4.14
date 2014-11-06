@@ -421,6 +421,7 @@ th {
 
 .fixed [class^="col-"] {
   background-color: transparent;
+  color: #fff;
 }
 
 .fixed h1 {
@@ -430,6 +431,11 @@ th {
 .section-header {
   background-color: #242424;
   color: #fff;
+}
+
+.section-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 /*
@@ -660,9 +666,23 @@ th {
   box-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .fixed {
   position: fixed;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .row .fixed-nav {
+    position: absolute;
+    top: 0;
+  }
+}
+.fixed-clear {
+  padding-top: 14px;
 }
 
 /* 
@@ -752,6 +772,16 @@ Module Rules
     A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
     When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
 */
+header[role="banner"] {
+  background: url("../img/banner-01.jpg") no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+}
+
+.banner-info {
+  text-align: center;
+}
+
 /* 
 State Rules
     A state is something that augments and overrides all other styles. For example, an accordion section may be in a collapsed or expanded state. A message may be in a success or error state.

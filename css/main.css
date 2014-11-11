@@ -399,45 +399,6 @@ th {
   padding: 0;
 }
 
-[class^="col-"] {
-  background-color: #bfbfbf;
-  color: #242424;
-  min-height: 50px;
-}
-
-.section-header h1 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.outer {
-  background-color: #d9d9d9;
-}
-
-.fixed {
-  background-color: #242424;
-  color: #fff;
-}
-
-.fixed [class^="col-"] {
-  background-color: transparent;
-  color: #fff;
-}
-
-.fixed h1 {
-  margin: 0;
-}
-
-.section-header {
-  background-color: #242424;
-  color: #fff;
-}
-
-.section-header h1 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
 /*
 12 Column Mobile First Grid System
 */
@@ -627,6 +588,10 @@ th {
   margin-bottom: 14px;
 }
 
+.outer.no-bottom-gutter {
+  margin-bottom: 0;
+}
+
 .outer .row:last-of-type [class^="col-"],
 .outer .row-no-gutter:last-of-type [class^="col-"] {
   margin-bottom: 0;
@@ -762,6 +727,12 @@ Globals
 Base Rules
 	A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudoclasses. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
 */
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
 /* 
 Layout Rules
     CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles.
@@ -780,6 +751,43 @@ header[role="banner"] {
 
 .banner-info {
   text-align: center;
+}
+
+.main-services header, .main-work header, .main-about {
+  text-align: center;
+}
+
+.main-work ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-about img {
+  border-radius: 50%;
+  height: auto;
+  width: 10vw;
+}
+@media only screen and (max-width: 768px) {
+  .main-about img {
+    width: 35vw;
+  }
+}
+
+.contentinfo-about-wrap {
+  background-color: #4d4d4d;
+  color: #fff;
+}
+
+.contentinfo-about-wrap {
+  background-color: #343434;
+  color: #fff;
+}
+
+.main-work, .main-about {
+  border-top: 1px solid #4d4d4d;
+  margin-top: 40px;
+  padding-top: 20px;
 }
 
 /* 
